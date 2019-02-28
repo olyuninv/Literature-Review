@@ -1,0 +1,19 @@
+3DV - 3D Video (stereo)
+FVV - Free Viewpoint video
+
+Keywords:
+"free-viewpoint video", "FVV", 
+
+Microsoft (through the work presented in [1]) and 8i3 have the best FVV content creation systems that could work for these immersive applications
+
+L. Ballan, G.J. Brostow, J. Puwein, M. Pollefeys
+Unstructured video-based rendering: interactive exploration of casually captured videos
+
+MS-SfS - Multi-source shape-from-silhouette
+
+FVV techniques - 2 groups:
+image-based, where the intermediate views between cameras are generated using interpolation or warping of the available images; and geometry-based techniques, where 3D geometry of both the dynamic foreground and static background is acquired, allowing the rendering from any other viewpoint.
+
+billboard interpolation -  scene is captured using handheld commodity cameras, both foreground masks and camera pose are recovered at every frame, and a simple model of the background is reconstructed to improve the visual experience in camera transitions.
+
+Multi-view stereo (MVS) techniques 

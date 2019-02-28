@@ -1,0 +1,108 @@
+ 
+Aperture problem of the optical flow algorithms - having 2 unknowns:
+ 
+Methods for determination:
+Phase correlation – inverse of normalized cross-power spectrum
+Block-based methods – minimizing sum of squared differences or sum of absolute differences, or maximizing normalized cross-correlation
+Differential methods of estimating optical flow, based on partial derivatives of the image signal and/or the sought flow field and higher-order partial derivatives, such as:
+Lucas–Kanade method – regarding image patches and an affine model for the flow field[10]
+Horn–Schunck method – optimizing a functional based on residuals from the brightness constancy constraint, and a particular regularization term expressing the expected smoothness of the flow field[10]
+Buxton–Buxton method – based on a model of the motion of edges in image sequences[11]
+Black–Jepson method – coarse optical flow via correlation[7]
+General variational methods – a range of modifications/extensions of Horn–Schunck, using other data terms and other smoothness terms.
+Discrete optimization methods – the search space is quantized, and then image matching is addressed through label assignment at every pixel, such that the corresponding deformation minimizes the distance between the source and the target image.[12] The optimal solution is often recovered through Max-flow min-cut theorem algorithms, linear programming or belief propagation methods.
+
+Phase correlation - calculated by fast Fourier transforms
+
+Hann and Hamming windows:
+window function
+
+cross-power spectrum
+
+-----
+IBR - Image-based rendering
+image-based modeling and rendering (IBMR) - methods rely on a set of two-dimensional images of a scene to generate a three-dimensional model and then render some novel views of this scene.
+
+----------
+View synthesis
+
+Depth-image-based rendering (DIBR) 
+
+-----------
+Free-Viewpoint video (FVV)
+Free-viewpoint TV (FTV) 
+3D Audio Visual (3DAV)
+
+Phase 1 - Multi-view Video Coding (MVC) - initiated in 2004 and completed in 2009. 
+Phase 2 - 3D Video (3DV) - 2007 and just completed recently
+Phase 3 - July 2014 - now
+
+Moving Picture Experts Group (MPEG) has been conducting Free-viewpoint TV (FTV) standardization [3] since 2001. In 2001, FTV was proposed to MPEG and the corresponding 3D Audio Visual (3DAV) activity started. The first phase of FTV, which is Multi-view Video Coding (MVC), was initiated in 2004 and completed in 2009. The second phase of FTV, which is known as 3D Video (3DV), started in 2007 and just completed recently. In the recent MPEG meetings since July 2014, FTV has started a new round of exploration experiments [4] for the third phase of FTV.
+
+Blue-ray 3D, which involves only (texture/color) video of multiple views and exploits the correlation among different views to further enhance the coding efficiency.
+
+The current 3DV involves both texture videos and the corresponding depth videos of multiple views, e.g., 3 views of texture and depth videos in the recommended configuration. These views are sent in the encoder side while a larger number of views can be generated at the receiver side based on these views by employing view synthesis. It generally targets the multiview displays with views less than about 30. 
+
+The newly started FTV exploration experiment aims at two specific applications, super multiview video and free viewpoint navigation, which requires the system to be able to synthesize dense views and specified views. Both the current 3DV and the newly started FTV need to provide virtual views using the received multiple views (decoded on the user side), which makes the view synthesis a key component in the processing chain of the 3D video system.
+
+hole filling
+image inpainting
+temporal correlation information to fill up holes
+
+--- 
+Dense motion
+
+Computer Vision: Algorithms and Applications. R Szeliski, Ch7. 
+
+OLD: frame-rate image alignment
+OLD: patch-based translational alignment (optical flow) technique developed by Lucas and Kanade (1981).
+OLD: used in all motion-compensated video compression schemes such as MPEG and H.263 (Le Gall 1991). 
+
+parametric motion estimation algorithms have found a wide variety
+of applications:
+- video summarization (Bergen et al. 1992a, Teodosio and Bender 1993,
+Kumar et al. 1995, Irani and Anandan 1998)
+- video stabilization (Hansen et al. 1994, Srinivasan et
+al. 2005, Matsushita et al. 2006)
+- video compression (Irani et al. 1995, Lee et al. 1997)
+
+To estimate the motion between two or more images, a suitable error metric must first be
+chosen to compare the images (§7.1).
+
+Estimage motion - either:
+- full search
+- hierarchical coarse-to-fine techniques (§7.1.1) based on image pyramids
+- Fourier transforms
+
+Sub-pixel precision in the alignment:
+
+- incremental methods (§7.1.3) based on a Taylorseries expansion of the image function:
+--applied to parametric motion models (§7.2), which model global image transformations such as rotation or shearing
+
+- piecewise parametric spline motion models (§7.3) can be used. 
+- If pixel accurate correspondences are desired, general-purpose  - optical flow (aka optic flow) techniques
+have been developed (§7.4)
+
+- For more complex motions that include a lot of occlusions, layered motion models (§7.5), which decompose the scene into coherently moving layers, can work well.
+
+- Finally, motion estimation can also be made more reliable by learning the typical dynamics or
+motion statistics of the scenes or objects being tracked, e.g., the natural gait of walking people
+
+The assumption that corresponding pixel values remain the same in the two images is often called the
+brightness constancy assumption.
+
+brightness constancy assumption
+
+--
+Color images can be processed by summing differences across all three color channels, although it is also possible to first transform the images into a different color space or to only use the luminance (which is often done in video
+encoders).
+
+---
+Error estimated based on:
+ - sum of absolute differences (SAD)
+ - sum of squared differences (SSD)
+
+
+
+
+

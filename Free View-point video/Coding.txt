@@ -1,0 +1,7 @@
+CMake https://cmake.org/
+
+CGAL The Computational Geometry Algorithms Library
+
+installing luarocks
+
+https://github.com/diz-vara/luajit-rocks

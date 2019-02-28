@@ -1,0 +1,56 @@
+TY  - CONF
+TI  - Phase-based frame interpolation for video
+T2  - 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
+SP  - 1410
+EP  - 1418
+AU  - S. Meyer
+AU  - O. Wang
+AU  - H. Zimmer
+AU  - M. Grosse
+AU  - A. Sorkine-Hornung
+PY  - 2015
+KW  - estimation theory
+KW  - image resolution
+KW  - image sequences
+KW  - interpolation
+KW  - optimisation
+KW  - video signal processing
+KW  - phase-based frame interpolation
+KW  - interpolated frame
+KW  - video sequence
+KW  - pixel correspondence
+KW  - phase-based method
+KW  - phase modification
+KW  - correspondence estimation
+KW  - bounded phase shift correction method
+KW  - phase information
+KW  - multiscale pyramid
+KW  - phase-based image synthesis
+KW  - smoother transition
+KW  - interpolated image
+KW  - global optimization
+KW  - optical flow method
+KW  - computational cost
+KW  - optical flow-based solution
+KW  - interpolation setting
+KW  - flow-based method
+KW  - high resolution
+KW  - high frame rate video
+KW  - Interpolation
+KW  - Optical imaging
+KW  - Adaptive optics
+KW  - Optical sensors
+KW  - Optimization
+KW  - Standards
+KW  - Image resolution
+DO  - 10.1109/CVPR.2015.7298747
+JO  - 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
+IS  - 
+SN  - 1063-6919
+VO  - 
+VL  - 
+JA  - 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
+Y1  - 7-12 June 2015
+ER  - 
+
+
