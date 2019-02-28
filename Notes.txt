@@ -1,4 +1,4 @@
- 
+﻿ 
 Aperture problem of the optical flow algorithms - having 2 unknowns:
  
 Methods for determination:
@@ -98,9 +98,88 @@ Color images can be processed by summing differences across all three color chan
 encoders).
 
 ---
+7.1 Translational alignment
 Error estimated based on:
+
+- Spatially varying weights
  - sum of absolute differences (SAD)
  - sum of squared differences (SSD)
+ - Geman-McClure function
+ - Weighted (Windowed) SSD functon
+
+If images do not overlap - or to remove backgound:
+All of these tasks can be accomplished by associating a spatially varying per-pixel weight
+value with each of the two images being matched. The error metric then become the weighted (or
+windowed) SSD function,
+EWSSD(u) = Sum(i) of w0(xi)w1(xi + u)[I1(xi + u) − I0(xi)]squared
+where the weighting functions w0 and w1 are zero outside the valid ranges of the images.
+
+ - Divide by overlap window:
+Per-pixel (or mean) squared pixel error. The square root of this quantity is the root
+mean squared intensity error
+RMS = square root (EWSSD/A )
+
+-Bias and gain model - β is the bias and α is the gain - 
+EBG(u) = Sum of (i) [I1(xi + u) − (1 + α)I0(xi) − β]squared = Sum of (i)[αI0(xi) + β − ei]squared 
+
+-Correlation
+  - Normalized cross-correlation (NCC)
+
+7.1.1 Hierarchical motion estimation
+
+ - FULL search - block matching in motion compensated video compression, where a range of possible motions (say ±16 pixels) is explored.
+
+ - hierarchical motion estimation (see Bergen et al. 1992a)
+
+7.1.2 Fourier-based alignment
+
+Requires only O(NM log NM) operations (Bracewell 1986) - as opposed to O(N2M2) operations for Full search
+
+- Fourier
+- Windowed correlation. Unfortunately, the Fourier convolution theorem only applies when the
+summation over xi
+is performed over all the pixels in both images, using a circular shift of the
+image when accessing pixels outside the original boundaries. While this is acceptable for small
+shifts and comparably sized images, it makes no sense when the images overlap by a small amount
+or one image is a small subset of the other.
+In that case, the cross-correlation function should be replaced with a windowed (weighted)
+cross-correlation function
+
+- Phase correlation. A variant of regular correlation (7.18) that is sometimes used for motion
+estimation is phase correlation (Kuglin and Hines 1975, Brown 1992). 
+Outperforms - depeninding on image quality. Not good for blurry images.
+
+ - Recently, gradient cross-correlation has emerged as a promising alternative to phase correlation
+(Argyriou and Vlachos 2003), although further systematic studies are probably warranted. Phase
+correlation has also been studied by Fleet and Jepson (1990) as a method for estimating general
+optical flow and stereo disparity
+
+- Rotations and scale estimation also possible - this trick only applies when the images have large overlap (small translational
+motion).
+
+ABOVE - estimate translational alignment to the nearest pixel
+
+7.1.3 Incremental refinement
+
+Sub-pixel:
+
+Lucas and Kanade (1981), is to do gradient descent on the SSD energy function (7.1), using a Taylor Series expansion of the image function
+
+Matrices are called the (Gauss-Newton approximation of the) Hessian and gradient-weighted residual vector,
+respectively...
+
+ - Uncertainty modeling
+covariance matrix, which captures the expected variance in the motion estimate in all possible directions
+
+For larger amounts of noise, the linearization performed by the Lucas-Kanade
+algorithm in (7.35) is only approximate, so the above quantity becomes the Cramer-Rao lower
+bound on the true covariance. Thus, the minimum and maximum eigenvalues of the Hessian
+A can now be interpreted as the (scaled) inverse variances in the least-certain and most-certain
+directions of motion. ((Steele and Jaynes 2005))
+
+
+??? Image warping
+
 
 
 
