@@ -1,0 +1,6 @@
+Instructor: Serge Belongie: Computer Vision
+
+https://cseweb.ucsd.edu/classes/sp09/cse252b/
+
+notes:
+https://cseweb.ucsd.edu/classes/sp04/cse252b/notes/
