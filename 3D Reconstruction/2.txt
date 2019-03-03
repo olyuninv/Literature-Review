@@ -1,0 +1,12 @@
+@INPROCEEDINGS{466816, 
+author={R. I. {Hartley}}, 
+booktitle={Proceedings of IEEE International Conference on Computer Vision}, 
+title={In defence of the 8-point algorithm}, 
+year={1995}, 
+volume={}, 
+number={}, 
+pages={1064-1070}, 
+keywords={image reconstruction;matrix algebra;image recognition;8-point algorithm;fundamental matrix;scene analysis;uncalibrated cameras;8 point algorithm;simple normalization;real images;Iterative algorithms;Cameras;Layout;Equations;Ear;Vectors;Research and development;Least squares methods;Image reconstruction;Stability}, 
+doi={10.1109/ICCV.1995.466816}, 
+ISSN={}, 
+month={June},}
