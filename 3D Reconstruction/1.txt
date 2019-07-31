@@ -1,0 +1,12 @@
+@INPROCEEDINGS{1640800, 
+author={S. M. {Seitz} and B. {Curless} and J. {Diebel} and D. {Scharstein} and R. {Szeliski}}, 
+booktitle={2006 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'06)}, 
+title={A Comparison and Evaluation of Multi-View Stereo Reconstruction Algorithms}, 
+year={2006}, 
+volume={1}, 
+number={}, 
+pages={519-528}, 
+keywords={Reconstruction algorithms;Stereo image processing;Stereo vision;Layout;Taxonomy;Image reconstruction;Shape measurement;Educational institutions;Cameras;Image databases}, 
+doi={10.1109/CVPR.2006.19}, 
+ISSN={1063-6919}, 
+month={June},}
