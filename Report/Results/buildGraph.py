@@ -171,7 +171,7 @@ def plot_offset(np_camera_params, np_51_50epochs, np_51_SSIM, np_71_40epochs, np
     #plt.show()
     #plt.savefig(join(results_folder, "PSNR_Offset_combined.png"))
 
-results_folder = "U:\Dissertation\Literature-Review\Report\Results"
+results_folder = "..\Results"
 
 file_camera_params = join(results_folder,"cameraParams_8.npy")
 file_frames = join(results_folder,"per_frame_8.npy")
